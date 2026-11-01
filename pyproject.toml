@@ -4,6 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "torch>=2.14.1",
-]
+dependencies = ["mne>=1.13.2", "moabb>=1.7.2", "torch>=2.14.1"]
+
+
+
+[dependency-groups]
+dev = ["marimo>=0.25.2"]
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14"]
+build-backend = "uv_build"
