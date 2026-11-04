@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = ["mne>=1.13.2", "moabb>=1.7.2", "torch>=2.14.1"]
+dependencies = [
+    "braindecode>=1.8.1",
+    "loguru>=0.7.3",
+    "moabb>=1.7.2",
+]
 
 
 
