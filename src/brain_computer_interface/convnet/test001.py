@@ -141,7 +141,7 @@ def _(classes, device, model, test_set, torch, train_set):
     lr = 0.0625 * 0.01
     weight_decay = 0
     batch_size = 64
-    n_epochs = 2
+    n_epochs = 128
 
     clf = EEGClassifier(
         model,

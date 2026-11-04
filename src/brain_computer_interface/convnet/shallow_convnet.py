@@ -12,10 +12,10 @@ class ShallowConvNet(nn.Module):
         super().__init__()
         self.ensuredims = Ensure4d()
         self.dimshuffle =  Rearrange("batch C T 1 -> batch 1 C T")
-        self.temporal_filter = nn.Conv2d(1, 40, (25, 1))
-        self.spatial_filter = nn.Conv2d(40, 40, (1, 44))
-        self.mean_pooling = nn.AvgPool2d((75, 1), stride=(15, 1))
-        self.line_classification = nn.Linear(1200, 4)
+        self.temporal_filter = nn.Conv2d(1, 40, (1, 25))
+        self.spatial_filter = nn.Conv2d(40, 40, (22, 1))
+        self.mean_pooling = nn.AvgPool2d((1, 75), stride=(1, 15))
+        self.line_classification = nn.Linear(2760, 4)
 
     def forward(self, x):
         print("Input shape:", x.shape)
