@@ -30,9 +30,9 @@ class HopfieldNetwork:
         self.energies = []
         index = 0
         while np.sum(np.abs(inputs - new_inputs)) != 0:
-            print(np.sum(np.abs(inputs - new_inputs)))
-            print(inputs)
-            print(new_inputs)
+            # print(np.sum(np.abs(inputs - new_inputs)))
+            # print(inputs)
+            # print(new_inputs)
             new_inputs = copy.deepcopy(x=inputs)
 
             index += 1
@@ -43,10 +43,10 @@ class HopfieldNetwork:
                 else:
                     inputs[i] = -1
                 self.energies.append(self.energy(inputs))
-            print(inputs)
-            print(new_inputs)
-            print(index)
-            print(np.sum(np.abs(inputs - new_inputs)))
+            # print(inputs)
+            # print(new_inputs)
+            # print(index)
+            # print(np.sum(np.abs(inputs - new_inputs)))
         return inputs
 
     def energy(self, state) -> float:
